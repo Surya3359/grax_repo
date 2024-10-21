@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Footer with Wave</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+header{
+    z-index: 1;
+    position: sticky;
+}
+
+body{
+    background-color: black;
+    height: auto;
+    margin: 0;
+}
+
+.glitch {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    background-image: url(img/home.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu{
+    background-color: #080d10;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    transition: all 0.3s ease;
+}
+.logo{
+    width: 120px;
+    height: 25px;
+    float: left;
+    margin-top: 35px;  
+    margin-left: 150px;
+}
+.menubar{
+    text-align: right;
+    padding: 20px;
+    padding-top: 35px;
+    margin-right: 100px;
+}
+#n{
+    
+    display: inline-block;
+    margin-right: 30px;
+}
+#n a{
+    text-decoration: none; 
+ }
+#n a:hover{
+   color: #9eb2ec;
+   
+}
+#v{
+    font-family: "poppins";
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+
+    
+@media screen and (max-width:430px){
+    .menu{
+        position: absolute;
+    }
+    #n{
+        display: block;
+    }
+    a{
+       font-size: 15px;
+        padding: 5px;
+        color: white;
+    }
+
+}
+
+.home_title{
+    font-size: 80px;
+    color: #fff;
+    font-family: "poppins";
+    letter-spacing: 1px;
+    padding-top: 200px;
+    padding-left: 100px;
+}
+.sub{
+    font-size: 20px;
+    color: #fff;
+    opacity: .8;
+    font-family: "poppins";
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-left: 100px;
+}
+
+.arrow{
+    animation-name: arrow;
+    animation-duration: 4s;
+    width: 5px;
+    height: 15px;
+    background-color:floralwhite;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes arrow{
+    0%{
+        transform: scaleY(0px);
+    }50%{
+        transform: scaleY(20px);
+    }100%{
+        transform: scaleY(50px);
+    }
+}
+
+/* wave section */  
+  .wave-container { 
+    margin-top: -25%; 
+    content: "";
+    width: 100%;
+    height: 500px;  
+    left: 0;
+    right: 0;
+    position:absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(wave-haikei.svg);
+  }
+  
+  @media(max-width:850px) {
+    .wave-container::before {    
+      height: 84px
+    }  
+  }
+
+  .about{
+    flex-direction: row;
+    width: 100%;
+    padding-top: 200px;
+    background-color: #fff;
+    justify-content: space-around;
+    display: flex;
+    height: 700px;
+  }
+
+  .about_img{
+    padding-left: 50px;
+    width: 400px;
+    height: 600px;
+    background-image: url(img/about.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: 0px 2px 19px #080d108e;
+  }
+
+  .about_us{
+    padding-top: 0%;
+    width: 40%;
+  }
+
+  .head-about{
+    color: #080d10;
+    font-size: 40px;
+    font-family: "poppins";
+    font-weight: 700;
+    letter-spacing: 8px;
+  }
+
+  #me{
+    color: #4169e1 !important;
+  }
+
+  #desc{
+    color: gray;
+    font-family: "poppins";
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 16px;
+    line-height: 35px;
+  }
+
+  .points{
+    width: 40%;
+    display: flex;
+  }
+
+  .points li{
+    list-style: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE1LjUgNUgxMWw1IDdsLTUgN2g0LjVsNS03eiIvPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTguNSA1SDRsNSA3bC01IDdoNC41bDUtN3oiLz48L3N2Zz4=);
+    width: 300px;
+    font-size: 18px;
+    padding: 10px;
+    font-family: "poppins";
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .download{
+    margin-left: 10px;
+    border-radius: 7px;
+    font-size: 18px;
+    background-color: #4169e1;
+    color: #fff;
+    font-family: "poppins";
+    letter-spacing: 1px;
+    height: 60px;
+    width: 200px;
+    border: none;
+  }
+  .download:hover{
+    border: 3px solid #4169e1;
+    background-color: #fff;
+    color: gray;
+    transition: background-color 400ms ease;
+  }
+/* gallery */
+  .head-gallery{
+    padding-left: 115px;
+    color: #080d10;
+    font-size: 34px;
+    font-family: "poppins";
+    font-weight: 700;
+    letter-spacing: 8px;
+  }
+  .gallery{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: fit-content;
+    background-color: #f9f9f9;
+  }
+  #we{
+    color: #4169e1 !important;
+  }
+
+ .grid{
+    width: 90%;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 80px;
+    justify-content: space-evenly;
+ }     
+
+ /* General container styling */
+.image-container {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  display: inline-flex;
+  justify-content: left;  /* Horizontally center the image */
+  align-items: stretch;
+  overflow: hidden;
+   /* Adjust the width as needed */
+}
+
+/* Image styling */
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Overlay styling (hidden by default) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white; /* Dark overlay */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.6s ease;
+}
+
+/* Text styling */
+.text {
+  color: gray;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "poppins";
+  letter-spacing: 1px;
+  text-align: left;
+  position: absolute;
+  top: 75%;
+  left: 10%;
+  position: relative;
+}
+
+#text2{
+  margin-top: 0px;
+  font-family: "poppins";
+  font-size: 22px;
+  color: #080d10;
+  font-weight: 600;
+}
+
+/* Show overlay and text on hover */
+.image-container:hover .overlay {
+  opacity: 1;
+}
+/* Line animation top */
+/* Style the line */
+.line {
+  position: relative;
+  margin-top: 100px;
+  margin-left: 10%;
+  width: 1px; /* Thickness of the line */
+  height: 50px; /* Line spans the entire width of the screen */
+  background-color: white; /* Color of the line */
+  overflow: hidden;
+}
+
+/* Line animation container */
+@keyframes moveLine {
+  0% {
+    transform: translateY(-100%); /* Start the line off-screen to the left */
+  }
+  10%{
+    transform: translateY(-50%);
+  }
+  30%{
+    transform: translateY(0%);
+  }
+  40%{
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(100%);  /* Move the line completely off-screen to the right */
+  }
+  60% {
+    transform: translateY(50%);
+  }
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-50%);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
+
+/* Apply animation to the line */
+.line {
+  animation: moveLine 3s linear infinite; /* Move the line with a linear infinite animation */
+}
+
+.percent{
+  margin-top: 150px;
+  display: flex;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
+}
+
+.percent_heading{
+  font-family: "poppins";
+  font-weight: 600;
+  font-size: 33px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  padding-left: 0%;
+}
+.percent_desc{
+  color: gray;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "poppins";
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 35px;
+  padding-left: 0%;
+}
+
+.per_span{
+  height: 100%;
+}
+.per{
+  margin-top: 7%;
+  width: 600px;
+  font-family: "poppins";
+  justify-content: space-between;
+  display: flex;
+  font-size: 18px; 
+  color: #080d10;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 500;
+}
+
+/* progress bar */
+/* Style for the bar container */
+.progress-bar {
+  margin-top: -10px;
+  width: 100%; /* Full width */
+  background-color: #e8e8e8; /* Background color for the empty part */
+  border-radius: 10px; /* Optional: rounded corners */
+  overflow: hidden; /* Ensure inner content stays inside */
+  height: 9px; /* Height of the progress bar */
+  position: relative;
+}
+
+/* Style for the progress (filled part of the bar) */
+.progress {
+  background-color: #4169e1; /* Green color for the filled part */
+  height: 100%;
+  line-height: 9px; /* Center the height) */
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* Freelance work section */
+.free{
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: 300px;
+  background-color: black;
+  background-image: url(img/inspiration-geometry.png);
+}
+
+.work{
+  color: #fff;
+  font-family: "poppins";
+  font-size: 34px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Blinking space animation */
+.blinking-text {
+  font-size: 34px;
+  font-weight: 600;
+  color: white;
+  animation: blink 1s infinite; /* Animation duration 1 second and loops infinitely */
+}
+
+/* Keyframes for blinking effect */
+@keyframes blink {
+  0% {
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    opacity: 1; /* Fully visible again */
+  }
+}
+
+
+/* Basic styles for the heading */
+.moving-underline {
+  position: relative; /* Position relative for the pseudo-element */
+  display: inline-block; /* Allows the pseudo-element to size properly */
+  color: #fff;
+  font-family: "poppins";
+  font-size: 17px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-weight: 600;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* Create the animated underline */
+.moving-underline::after {
+  content: ''; /* Required to create a pseudo-element */
+  position: absolute; /* Position relative to the text */
+  left: 0; /* Start at the left edge */
+  bottom: 0px; /* Position below the text */
+  height: 1px; /* Thickness of the underline */
+  width: 100%; /* Full width of the text */
+  background-color: white; /* Color of the underline */
+  transform: translateX(-100%); /* Start the underline off-screen to the left */
+  transition: transform 0.3s ease; /* Smooth transition for moving */
+}
+
+/* Move the underline on hover */
+.moving-underline:hover::after {
+    transform: translateX(0); /* Move underline into place */
+}
+
+.news{
+  width: 100%;
+  height: 600px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #f9f9f9;
+}
+
+.news1{
+  width: 380px;
+  height: 330px;
+}
+.news-img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.news-block{
+  margin-top: 50px;
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.news-title{
+  font-family: "poppins";
+  font-size: 20px;
+  font-weight: 600;
+  color: #080d10;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.news-date{
+  font-family: "poppins";
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: gray;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.form{
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: fit-content;
+  background-color: #fff;
+}
+
+.form-left{
+  width: 50%;
+  justify-content: center;
+  padding-left: 8%;
+  display: block;
+  
+}
+
+.contactus_text{
+  font-family: "poppins";
+  width: 100%;
+  margin-top: 3%;
+  font-size: 17px;
+  font-weight: 600;
+  color: #080d10;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.per_desc1{
+  color: gray;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "poppins";
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  line-height: 35px;
+  padding-left: 5%;
+}
+
+.form-right{
+  width: 50%;
+  padding-right: 8%;
+  display: block;
+}
+
+.fill-form{
+  width: 90%;
+  margin: 20px;
+  height: 45px;
+  border-radius: 5px;
+  padding-left: 10px;
+  text-align: left;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: black;
+  border: 1px solid #cabdbd;
+  font-size: 16px;
+}
+
+.fill-address{
+  width: 90%;
+  text-align: start;
+  margin: 20px;
+  height: 120px;
+  border-radius: 5px;
+  border: 2px solid #cabdbd;
+  resize: none;
+  padding-left: 10px;
+  text-align: left;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+
+}
+.fill-form:focus{
+  border: 2px solid #080d10;
+  outline: none;
+}
+.fill-address:focus{
+  border: 2px solid #080d10;
+  outline: none;
+}
+.form-first{
+  padding-top: 30px;
+  width: 100%;
+  display: inline-flex;
+}
+
+.message{
+  justify-content: center;
+  display: block;
+}
+.download2{
+  margin-left: 3%;
+  border-radius: 7px;
+  font-size: 18px;
+  background-color: #4169e1;
+  color: #fff;
+  font-family: "poppins";
+  letter-spacing: 1px;
+  height: 60px;
+  width: 93%;
+  border: none;
+}
+.download2:hover{
+  border: 3px solid #4169e1;
+  background-color: #fff;
+  color: gray;
+  transition: background-color 400ms ease;
+}
+
+/* wave effect */
+
+.ocean{
+  background-color: #fff;
+  background-size: cover;
+  background-image: url(wave-haikei-wave-2-footer.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 500px;
+}
+.wave{
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20%;
+}
+
+.footer-imgs{
+  margin-top: 2%;
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.links {
+ 
+  height: 50px;
+  width: 50px;
+}
+
+.copyright{
+  color: #fff;
+  margin-top: 3%;
+  font-family: "poppins";
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-right: 7%;
+}
+    </style>
+    <!-- Include Font Awesome for Social Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="menu">
+        <image class="logo" src="logo.png"></image>
+        <nav class="menubar">
+            <li id="n"><a id="v" href="#">Home</a></li>
+            <li id="n"><a id="v" href="#">About</a></li>
+            <li id="n"><a id="v" href="#">Portfolio</a></li>
+            <li id="n"><a id="v" href="#">News</a></li>
+            <li id="n"><a id="v" href="#">Contact</a></li>
+        </nav>
+    </div>
+   
+</header>
+<div class="glitch">
+    <p class="home_title">Alan Walker</p>
+    <p class="sub">Web & Mobile App Developer</p>
+    <div class="line"></div>
+
+</div>
+<div class="wave-container"></div>
+<!--about us section-->
+<div class="about">
+    <a class="about_img">My Profile</a>
+    <div class="about_us">
+        <p class="head-about">ABOUT <span id="me">ME</span></p>
+        <p id="desc">Hello! I'm Alan Walker. I'm a web developer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
+        <ul class="points">
+           <span><li>Web Development</li>
+            <li>Search Engine Optimization</li></span> 
+            <span><li>Social Media Marketing</li>
+                <li>Content Generation</li></span>
+        </ul>
+        <button type="submit" class="download">Download CV</button>
+    </div>
+</div>
+<!--Gallery section-->
+<div class="gallery">
+    <p class="head-gallery">SELECTED <span id="we">WORKS</span></p>
+    <div class="grid">
+        <div class="image-container">
+            <img src="img/1.jpg" alt="Sample Image" class="image">
+            <div class="overlay">
+                <div class="text">
+                    Video
+                    <p id="text2">Sweet Fruit</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="img/2.jpg" alt="Sample Image" class="image">
+            <div class="overlay">
+                <div class="text">
+                    Branding
+                    <p id="text2">Good Present</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="img/3.jpg" alt="Sample Image" class="image">
+            <div class="overlay">
+                <div class="text">
+                    Design
+                    <p id="text2">Ice Cream</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="image-container">
+            <img src="img/4.jpg" alt="Sample Image" class="image">
+            <div class="overlay">
+                <div class="text">
+                    Video
+                    <p id="text2">Black Coffee</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="img/5.jpg" alt="Sample Image" class="image">
+            <div class="overlay">
+                <div class="text">
+                    Branding
+                    <p id="text2">Blue Lemon</p>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="img/6.jpg" alt="Sample Image" class="image">
+            <div class="overlay">
+                <div class="text">
+                    Design
+                    <p id="text2">Delicious Cherry</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Percentage group-->
+    <div class="percent">
+       <span>
+        <p class="percent_heading">I have high skills in developing <br>and programming</p>
+        <p class="percent_desc">I was doing everything in my power to provide me with all the <br>experiences to provide cost-effective and high quality products <br>to satisfy my customers all over the world</p>
+       </span>
+       <span id="per_span">
+            <p class="per">Web Development <span>95%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 95%;"></div>
+                </div>
+            <p class="per">Brand Identity <span>80%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            <p class="per">Logo Design <span>90%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+       </span>
+
+    </div>
+    <!--freelance work-->
+    <div class="free">
+        <div class="work">I'm available for freelance work<span class="blinking-text">_</span></div>
+        <a href="#" class="moving-underline">Contact Me</a>
+    </div>
+    <!--Latest News section-->
+    <div class="news">
+            <p class="head-gallery">LATEST <span id="we">NEWS</span></p>
+            <div class="news-block">    
+                <div class="news1">
+                    <image src="img/news1.jpg" class="news-img"></image>
+                    <p class="news-title">Developers watch out for these burnout symptoms</p>
+                    <p class="news-date">BY ALEX WATSON 01 JANUARY 2022</p>
+                </div> 
+                <div class="news1">
+                    <image src="img/news2.jpg" class="news-img"></image>
+                    <p class="news-title">Developers watch out for these burnout symptoms</p>
+                    <p class="news-date">BY ALEX WATSON 01 JANUARY 2022</p>
+                </div> 
+                <div class="news1">
+                    <image src="img/news3.jpg" class="news-img"></image>
+                    <p class="news-title">Developers watch out for these burnout symptoms</p>
+                    <p class="news-date">BY ALEX WATSON 01 JANUARY 2022</p>
+                </div>
+            </div>
+    </div>
+    <!--Contact us form section-->
+    <div class="form">
+        <p class="head-gallery">GET IN <span id="we">TOUCH</span></p>
+       <div class="form-first">
+                <div class="form-left">
+                    <p class="percent_desc">Please fill out the form on this section to contact with me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday</p>
+                    <div class="contactus_text"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; Addess: &nbsp;&nbsp;<span class="per_desc1">Brook 103, New York, USA</span></div>
+                    <div class="contactus_text"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Email: &nbsp;&nbsp;&nbsp;&nbsp;<span class="per_desc1">example@gmail.com</span></div>
+                    <div class="contactus_text"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;Phone: &nbsp;&nbsp;&nbsp;<span class="per_desc1">+77 033 442 55 57</span></div>
+                    <div class="contactus_text"><i class="fa fa-globe" aria-hidden="true"></i> Website: &nbsp;<span class="per_desc1">www.myaddress.com</span></div>
+                    <div class="contactus_text"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter: &nbsp;&nbsp;<span class="per_desc1">@twitternickname</span></div>
+                    <div class="contactus_text"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook:<span class="per_desc1">@facebooknickname</span></div>
+                </div>
+                <div class="form-right">
+                    <form class="message" action="http://httpbin.org/get">
+                        <input class="fill-form" type="text" placeholder="Name">   
+                        <input class="fill-form" type="email" placeholder="Email">   
+                        <input class="fill-address" placeholder="Address"> 
+                        <button type="submit" class="download2">Send Message</button>
+                    </form>
+                </div>
+       </div>
+    </div>
+   <!--footer-->
+   <div class="ocean">
+    <div class="footer">
+        <image src="logo.png" class="logo"></image>
+        <div class="footer-imgs">
+            <a href="https://www.facebook.com" target="_blank"><image src="icons/facebook-176-svgrepo-com.svg" class="links"></image></a>
+            <a href="https://www.x.com" target="_blank"><image src="icons/twitter-154-svgrepo-com.svg" class="links"></image></a>
+            <a href="https://www.google.com" target="_blank"><image src="icons/basket-ball-basketball-svgrepo-com.svg" class="links"></image></a>
+            <a href="https://www.instagram.com/" target="_blank"><image src="icons/tiktok-svgrepo-com.svg" class="links"></image></a>
+        </div>
+        <div class="copyright">
+            © COPYRIGHT 2022 BY MARKETIFY
+        </div>
+        
+    </div>
+   </div>
+</div>
+
+
+</body>
+</html>
